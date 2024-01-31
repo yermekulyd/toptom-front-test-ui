@@ -1,0 +1,12 @@
+.button {
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, .65);
+  background: rgba(0, 0, 0, .45);
+  color: rgba(255, 255, 255, .85);
+
+  &_large {
+    font-size: 2rem;
+  }
+}
