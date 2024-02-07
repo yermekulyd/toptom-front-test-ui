@@ -1,30 +1,30 @@
 .progress-tracker {
-  width: 100%; // Make the tracker full-width
-  max-width: 80%; // Maximum width of the tracker, you can adjust this value
-  margin: auto; // Center the tracker
+  width: 100%;
+  max-width: 80%;
+  margin: auto;
   margin-top: 30px;
-  padding: 30px; // Add some padding inside the tracker
-  background-color: #f5f5f5; // Background color of the tracker
-  border: 2px solid #ddd; // Border color as per the design
-  border-radius: 10px; // Rounded corners as per the design
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Optional: adds shadow to the tracker
+  padding: 30px;
+  background-color: #f5f5f5;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   .stages {
     display: flex;
     position: relative;
-    width: 100%; // Ensure the stages container is full-width
-    height: 50px; // Increase the height if you want taller stages
+    width: 100%;
+    height: 50px;
 
     &:before {
       content: '';
       position: absolute;
       top: 20%;
       left: 0;
-      width: 100%;
-      height: 4px; // Make the progress bar thicker
-      background-color: #e6e6e6; // Lighter color for the unfinished part of the bar
+      //   width: 100%;
+      height: 4px;
+      background-color: #e6e6e6;
       transform: translateY(-50%);
-      border-radius: 2px; // Optional: adds rounded corners to the progress bar
+      border-radius: 2px;
       z-index: 0;
     }
 
@@ -35,6 +35,7 @@
       flex: 1;
       position: relative;
       z-index: 1;
+      margin: 0 4px;
 
       .stage-dot-container {
         display: flex;
@@ -43,23 +44,40 @@
 
         .stage-dot {
           background-color: #fff;
-          border: 4px solid #ddd; // Make the border thicker
+          border: 4px solid #fa4d1e;
           border-radius: 50%;
-          width: 10px; // Increase the size of the dot
-          height: 10px; // Increase the size of the dot
+          width: 10px;
+          height: 10px;
           transition: background-color 0.3s, border-color 0.3s;
         }
       }
 
-      &.active .stage-dot-container .stage-dot {
-        // background-color: red; // Active color
-        border-color: #fa4d1e; // Active color
+      &:before {
+        content: '';
+        position: absolute;
+        top: 20%;
+        left: 0;
+        width: calc(100% - 8px);
+        height: 4px;
+        background-color: #fa4d1e; // Active color
+        transform: translateY(-50%);
+        border-radius: 2px;
+        z-index: -1;
+      }
+
+      &.active {
+        ~ .stage .stage-dot-container .stage-dot {
+          border-color: #ddd;
+        }
+        ~ .stage:before {
+          background-color: #ddd; // Active color for progress bar and previous progress bars
+        }
       }
 
       .stage-label {
-        margin-top: 12px; // Increase space between dot and label if necessary
+        margin-top: 12px;
         color: #333;
-        font-size: 16px; // Increase font size for readability
+        font-size: 16px;
         text-align: center;
         font-family: 'Noto Sans', sans-serif;
       }
