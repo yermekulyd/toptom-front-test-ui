@@ -9,9 +9,8 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
 
-const props = defineProps({
+defineProps({
   mode: String,
   text: String,
   iconPath: String // Prop for the icon path

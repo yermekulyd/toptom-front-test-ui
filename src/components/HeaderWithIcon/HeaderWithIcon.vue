@@ -12,7 +12,7 @@
 </template>
   
 <script setup lang="ts">
-import Button from '../Button/Button.vue';
+import Button from '../Button/CustomButton.vue';
 import GroupIcons from '../Icons/IconGroup.vue';
 </script>
   

@@ -3,7 +3,7 @@ import { mount } from '@vue/test-utils'
 
 import type { IButtonProps } from '@/components/Button'
 
-import Button from '@/components/Button/Button.vue'
+import Button from '@/components/Button/CustomButton.vue'
 
 describe('Button', () => {
   it('renders properly', () => {
