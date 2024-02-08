@@ -20,7 +20,6 @@
       position: absolute;
       top: 20%;
       left: 0;
-      //   width: 100%;
       height: 4px;
       background-color: #e6e6e6;
       transform: translateY(-50%);
@@ -70,7 +69,7 @@
           border-color: #ddd;
         }
         ~ .stage:before {
-          background-color: #ddd; // Active color for progress bar and previous progress bars
+          background-color: #d0d5dd; // Active color for progress bar and previous progress bars
         }
       }
 
@@ -80,6 +79,36 @@
         font-size: 16px;
         text-align: center;
         font-family: 'Noto Sans', sans-serif;
+      }
+
+      .stage-info {
+        background-color: #0F0E14;
+        color: #FFFFFF;
+        padding: 15px 20px;
+        border-radius: 10px;
+        position: absolute;
+        top: 100%;
+        white-space: nowrap;
+        transform: translateX(-50%);
+        left: 50%;
+        margin-top: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: 'Noto Sans', sans-serif;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        // Add the pointer
+        &::after {
+          content: '';
+          position: absolute;
+          top: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid #0F0E14;
+          z-index: 1;
+        }
       }
     }
   }

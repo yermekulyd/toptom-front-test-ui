@@ -17,6 +17,6 @@ const Template = (args) => ({
 
 export const Default = Template.bind({});
 Default.args = {
-  activeStage: 1,
+  activeStage: 3,
   stages: ['Создан', 'Оплачен', 'Готовится к отправке', 'Готов к отправке', 'В пути', 'Доставлен'],
 };

@@ -17,7 +17,7 @@ console.log(i18n.t('test-message'))
   <main>
     <!-- main
     <Button :mode="'large'" text="Click me"/> -->
-    <OrderProgressTracker :activeStage="2" :stages="['Создан', 'Оплачен', 'Готовится к отправке', 'Готов к отправке', 'В пути', 'Доставлен']" />
+    <OrderProgressTracker :activeStage="4" :stages="['Создан', 'Оплачен', 'Готовится к отправке', 'Готов к отправке', 'В пути', 'Доставлен']" />
   </main>
 </template>
 
