@@ -1,0 +1,46 @@
+.header-with-icon {
+  align-items: center;
+  background-color: #0f0e14;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  border-radius: 40px;
+  flex-wrap: nowrap;
+
+  .header-content {
+    .header-title {
+      margin-top: 0;
+      font-family: 'Manrope';
+      font-size: 48px;
+      font-weight: 800;
+    }
+
+    .header-description {
+      font-size: 24px;
+      font-family: 'Manrope';
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header-with-icon {
+    padding: 20px;
+
+    .header-content {
+      max-width: 100%;
+
+      .header-title {
+        font-size: 36px;
+      }
+
+      .header-description {
+        font-size: 18px;
+      }
+    }
+
+    .header-icons {
+        scale: 0.7;
+    }
+  }
+}

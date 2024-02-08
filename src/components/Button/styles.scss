@@ -1,10 +1,16 @@
 .button {
-  padding: 0.5rem;
-  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 9px 31px;
   outline: none;
+  font-size: 24px;
+  font-family: 'Manrope';
+  color: #0F0E14;
+  background-color: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, .65);
-  background: rgba(0, 0, 0, .45);
-  color: rgba(255, 255, 255, .85);
+  border-radius: 100px;
 
   &_large {
     font-size: 2rem;

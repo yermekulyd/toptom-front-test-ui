@@ -16,26 +16,19 @@
 <script setup lang="ts">
 import { defineProps, ref } from 'vue';
 
-const { stages, activeStage } = defineProps<{
+const { stages, activeStage, stageInfos } = defineProps<{
     stages: string[];
     activeStage: number;
+    stageInfos: string[];
 }>();
 
 const hoveredStage = ref<number | null>(null);
-const stageTexts = [
-    'Ожидает оплаты',
-    'Заказ передаётся в магазин',
-    'Магазин готовит заказ к отправке',
-    'Ищем свободных курьеров',
-    'Курьер скоро будет у вас',
-    'Заказ был доставлен курьером',
-];
 const stageInfo = ref('');
 
 function setStageText(index: number) {
     if (index <= activeStage) {
         hoveredStage.value = index;
-        stageInfo.value = stageTexts[index];
+        stageInfo.value = stageInfos[index];
     }
 }
 
